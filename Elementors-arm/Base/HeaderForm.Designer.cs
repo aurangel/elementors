@@ -175,9 +175,9 @@
             // 
             this.backstageViewClientControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.backstageViewClientControl1.Appearance.Options.UseBackColor = true;
-            this.backstageViewClientControl1.Location = new System.Drawing.Point(168, 63);
+            this.backstageViewClientControl1.Location = new System.Drawing.Point(194, 63);
             this.backstageViewClientControl1.Name = "backstageViewClientControl1";
-            this.backstageViewClientControl1.Size = new System.Drawing.Size(683, 419);
+            this.backstageViewClientControl1.Size = new System.Drawing.Size(657, 419);
             this.backstageViewClientControl1.TabIndex = 0;
             // 
             // backstageViewClientControl2
