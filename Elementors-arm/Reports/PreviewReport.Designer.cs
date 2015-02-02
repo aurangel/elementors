@@ -235,9 +235,9 @@
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.documentViewer1.IsMetric = true;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 126);
+            this.documentViewer1.Location = new System.Drawing.Point(0, 123);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(1243, 540);
+            this.documentViewer1.Size = new System.Drawing.Size(1243, 535);
             this.documentViewer1.TabIndex = 0;
             this.documentViewer1.Zoom = 1.2F;
             // 
@@ -317,7 +317,7 @@
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(1243, 126);
+            this.ribbon.Size = new System.Drawing.Size(1243, 123);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             this.ribbon.TransparentEditors = true;
@@ -1371,10 +1371,10 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.zoomTrackBarEditItem1);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 666);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 658);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1243, 23);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1243, 31);
             // 
             // PreviewReport
             // 

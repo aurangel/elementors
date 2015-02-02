@@ -67,6 +67,11 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.cxLookAndFeelController = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.nbMain = new DevExpress.XtraNavBar.NavBarControl();
+            this.DocumentGroup = new DevExpress.XtraNavBar.NavBarGroup();
+            this.docTitulList = new DevExpress.XtraNavBar.NavBarItem();
+            this.docRatingMark = new DevExpress.XtraNavBar.NavBarItem();
+            this.docBookAllTeachers = new DevExpress.XtraNavBar.NavBarItem();
+            this.docBookRating = new DevExpress.XtraNavBar.NavBarItem();
             this.TablesGroup = new DevExpress.XtraNavBar.NavBarGroup();
             this.biDisciplins = new DevExpress.XtraNavBar.NavBarItem();
             this.biControl = new DevExpress.XtraNavBar.NavBarItem();
@@ -74,11 +79,6 @@
             this.biTeachers = new DevExpress.XtraNavBar.NavBarItem();
             this.biRating = new DevExpress.XtraNavBar.NavBarItem();
             this.biDirectoryRating = new DevExpress.XtraNavBar.NavBarItem();
-            this.DocumentGroup = new DevExpress.XtraNavBar.NavBarGroup();
-            this.docTitulList = new DevExpress.XtraNavBar.NavBarItem();
-            this.docRatingMark = new DevExpress.XtraNavBar.NavBarItem();
-            this.docBookAllTeachers = new DevExpress.XtraNavBar.NavBarItem();
-            this.docBookRating = new DevExpress.XtraNavBar.NavBarItem();
             this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
@@ -475,6 +475,50 @@
             this.nbMain.Text = "Таблицы";
             this.nbMain.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbMain_LinkPressed);
             // 
+            // DocumentGroup
+            // 
+            this.DocumentGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 9.25F);
+            this.DocumentGroup.Appearance.Options.UseFont = true;
+            this.DocumentGroup.Caption = "Документы";
+            this.DocumentGroup.Expanded = true;
+            this.DocumentGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.docTitulList),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.docRatingMark),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.docBookAllTeachers),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.docBookRating)});
+            this.DocumentGroup.Name = "DocumentGroup";
+            this.DocumentGroup.SmallImage = ((System.Drawing.Image)(resources.GetObject("DocumentGroup.SmallImage")));
+            // 
+            // docTitulList
+            // 
+            this.docTitulList.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.docTitulList.Appearance.Options.UseFont = true;
+            this.docTitulList.Caption = "Титульный лист";
+            this.docTitulList.Name = "docTitulList";
+            this.docTitulList.SmallImage = ((System.Drawing.Image)(resources.GetObject("docTitulList.SmallImage")));
+            this.docTitulList.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docTitulList_LinkPressed);
+            // 
+            // docRatingMark
+            // 
+            this.docRatingMark.Caption = "Рейтинговая оценка";
+            this.docRatingMark.Name = "docRatingMark";
+            this.docRatingMark.SmallImage = ((System.Drawing.Image)(resources.GetObject("docRatingMark.SmallImage")));
+            this.docRatingMark.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docRatingMark_LinkPressed);
+            // 
+            // docBookAllTeachers
+            // 
+            this.docBookAllTeachers.Caption = "Преподаватели";
+            this.docBookAllTeachers.Name = "docBookAllTeachers";
+            this.docBookAllTeachers.SmallImage = ((System.Drawing.Image)(resources.GetObject("docBookAllTeachers.SmallImage")));
+            this.docBookAllTeachers.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docBookAllTeachers_LinkPressed);
+            // 
+            // docBookRating
+            // 
+            this.docBookRating.Caption = "Заполнение рейтинга ";
+            this.docBookRating.Name = "docBookRating";
+            this.docBookRating.SmallImage = ((System.Drawing.Image)(resources.GetObject("docBookRating.SmallImage")));
+            this.docBookRating.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docBookRating_LinkPressed);
+            // 
             // TablesGroup
             // 
             this.TablesGroup.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -529,50 +573,6 @@
             this.biDirectoryRating.SmallImage = ((System.Drawing.Image)(resources.GetObject("biDirectoryRating.SmallImage")));
             this.biDirectoryRating.Tag = "Справочник_рейтинга";
             this.biDirectoryRating.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.biDirectoryRating_LinkPressed);
-            // 
-            // DocumentGroup
-            // 
-            this.DocumentGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 9.25F);
-            this.DocumentGroup.Appearance.Options.UseFont = true;
-            this.DocumentGroup.Caption = "Документы";
-            this.DocumentGroup.Expanded = true;
-            this.DocumentGroup.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.docTitulList),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.docRatingMark),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.docBookAllTeachers),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.docBookRating)});
-            this.DocumentGroup.Name = "DocumentGroup";
-            this.DocumentGroup.SmallImage = ((System.Drawing.Image)(resources.GetObject("DocumentGroup.SmallImage")));
-            // 
-            // docTitulList
-            // 
-            this.docTitulList.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.docTitulList.Appearance.Options.UseFont = true;
-            this.docTitulList.Caption = "Титульный лист";
-            this.docTitulList.Name = "docTitulList";
-            this.docTitulList.SmallImage = ((System.Drawing.Image)(resources.GetObject("docTitulList.SmallImage")));
-            this.docTitulList.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docTitulList_LinkPressed);
-            // 
-            // docRatingMark
-            // 
-            this.docRatingMark.Caption = "Рейтинговая оценка";
-            this.docRatingMark.Name = "docRatingMark";
-            this.docRatingMark.SmallImage = ((System.Drawing.Image)(resources.GetObject("docRatingMark.SmallImage")));
-            this.docRatingMark.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docRatingMark_LinkPressed);
-            // 
-            // docBookAllTeachers
-            // 
-            this.docBookAllTeachers.Caption = "Преподаватели";
-            this.docBookAllTeachers.Name = "docBookAllTeachers";
-            this.docBookAllTeachers.SmallImage = ((System.Drawing.Image)(resources.GetObject("docBookAllTeachers.SmallImage")));
-            this.docBookAllTeachers.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docBookAllTeachers_LinkPressed);
-            // 
-            // docBookRating
-            // 
-            this.docBookRating.Caption = "Заполнение рейтинга ";
-            this.docBookRating.Name = "docBookRating";
-            this.docBookRating.SmallImage = ((System.Drawing.Image)(resources.GetObject("docBookRating.SmallImage")));
-            this.docBookRating.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.docBookRating_LinkPressed);
             // 
             // documentManager
             // 
