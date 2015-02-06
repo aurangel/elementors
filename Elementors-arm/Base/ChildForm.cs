@@ -30,12 +30,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-using DevExpress.XtraBars.Docking2010;
-using DevExpress.XtraBars.Docking2010.Views.Tabbed;
-using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Base;
+using System.Data.Common;
+using System.Data.SQLite;
+using System.Data;
 
 namespace Elementors_arm
 {
+
     public partial class ChildForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private string tableName;

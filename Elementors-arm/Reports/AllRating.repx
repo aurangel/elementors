@@ -283,7 +283,7 @@ namespace XtraReportSerialization {
             // sqlDataSource1
             // 
             this.sqlDataSource1.ConnectionName = "dataConnection";
-            sQLiteConnectionParameters1.FileName = "D:\\Program\\S\\Elementors Arm\\Elementors-arm\\bin\\x86\\Release\\data.db";
+            sQLiteConnectionParameters1.FileName = "data.db";
             sQLiteConnectionParameters1.Password = null;
             this.sqlDataSource1.ConnectionParameters = sQLiteConnectionParameters1;
             customSqlQuery1.Name = "CustomSqlQuery";

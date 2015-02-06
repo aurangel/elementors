@@ -26,19 +26,17 @@ Copyright © 2015 Vlasenko Roman
 */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using System.IO;
 using System.Data;
-using System.Drawing;
 
 using DevExpress.XtraBars.Localization;
 using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraNavBar;
-using DevExpress.LookAndFeel;
-
-using DevExpress.XtraReports.UI;	
+using DevExpress.XtraPrinting.Localization;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraSplashScreen;
+using System.Threading;
 
 namespace Elementors_arm
 {
@@ -54,7 +52,7 @@ namespace Elementors_arm
         {
             try
             {
-                dbOperator = DBOperator.Instance; /* Создаем экземпляр объекта */
+                dbOperator = DBOperator.Instance;
             }
             catch (Exception ex)
             {
@@ -64,25 +62,6 @@ namespace Elementors_arm
 
             SkinHelper.InitSkinGallery(scgiLookAndFeel, true);
             cxLookAndFeelController.LookAndFeel.SkinName = Properties.Settings.Default.Skin;
-        }
-
-        internal class PicturePanel : Panel
-        {
-            public PicturePanel()
-            {
-                this.DoubleBuffered = true;
-                this.AutoScroll = true;
-                this.BackgroundImageLayout = ImageLayout.Center;
-            }
-            public override Image BackgroundImage
-            {
-                get { return base.BackgroundImage; }
-                set
-                {
-                    base.BackgroundImage = value;
-                    if (value != null) this.AutoScrollMinSize = value.Size;
-                }
-            }
         }
 
         public class MyBarLocalizer : BarLocalizer
@@ -172,7 +151,18 @@ namespace Elementors_arm
 
         private void dxReportDesigner_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(Base.WaitForm1), true, true, false);
+
+            for (int i = 1; i <= 100; i++)
+            {
+                SplashScreenManager.Default.SetWaitFormDescription(i.ToString() + "%");
+                Thread.Sleep(30);
+            }
+
             Reports.ReportDesignerForm ReportForm = new Reports.ReportDesignerForm();
+
+            SplashScreenManager.CloseForm(false);
+
             ReportForm.Show();
         }
 
@@ -197,11 +187,11 @@ namespace Elementors_arm
             Reports.PreviewReport preview = new Reports.PreviewReport();
 
             XtraReport report = new XtraReport();
-
             preview.documentViewerRibbon.DocumentViewer.DocumentSource = report;
+
             report.CreateDocument();
             report.LoadLayout(Data.ValueOfReport);
-
+            preview.Text = nbMain.PressedLink.Caption;
             preview.Show();
         }
 
@@ -227,6 +217,53 @@ namespace Elementors_arm
         {
             Data.ValueOfReport = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AllRating.repx");
             LoadReport();
+        }
+
+        private void dxKnowledgeBase_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string PathToHelp = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "help/obzor_prilozheniya.html");
+
+            DevExpress.XtraEditors.XtraMessageBox.Show("Если вы используете браузер Internet Explorer, то вам необходимо настроить показ сценариев. " +
+            "(Либо воспользуйтесь CHM справкой)" + "\r\n\r\n" +
+            "Меню > Свойства обозревателя > Дополнительно" + Environment.NewLine +
+            "Флажок: Разрешать запуск активного содержимого файлов на моем компьютере", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Question);
+
+            System.Diagnostics.Process.Start(PathToHelp);
+        }
+
+        private void dxSource_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Exoticness/Elementors-arm");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string PathToHelp = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "help/Help.chm");
+            Help.ShowHelp(this, PathToHelp);
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string PathToHelp = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SQLite/sqlite.exe");
+            System.Diagnostics.Process.Start(PathToHelp);
+        }
+
+        private void dxAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Base.AboutForm about = new Base.AboutForm();
+            about.Show();
+        }
+
+        private void bbKnowledgeBase_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string PathToHelp = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "help/obzor_prilozheniya.html");
+            System.Diagnostics.Process.Start(PathToHelp);
+        }
+
+        private void bbAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Base.AboutForm about = new Base.AboutForm();
+            about.Show();
         }
 
     }

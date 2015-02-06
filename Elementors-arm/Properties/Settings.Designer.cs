@@ -34,5 +34,16 @@ namespace Elementors_arm.Properties {
                 this["Skin"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.ArrayList cbCollection {
+            get {
+                return ((global::System.Collections.ArrayList)(this["cbCollection"]));
+            }
+            set {
+                this["cbCollection"] = value;
+            }
+        }
     }
 }

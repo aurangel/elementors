@@ -51,7 +51,7 @@
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(720, 32);
+            this.ribbon.Size = new System.Drawing.Size(728, 32);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -60,7 +60,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 369);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(720, 23);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(728, 23);
             // 
             // gridControl
             // 
@@ -73,9 +73,8 @@
             this.gridControl.MenuManager = this.ribbon;
             this.gridControl.MinimumSize = new System.Drawing.Size(400, 200);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(720, 337);
+            this.gridControl.Size = new System.Drawing.Size(728, 337);
             this.gridControl.TabIndex = 9;
-            this.gridControl.UseEmbeddedNavigator = true;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
@@ -121,7 +120,7 @@
             this.ActiveGlowColor = System.Drawing.Color.Blue;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 392);
+            this.ClientSize = new System.Drawing.Size(728, 392);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);

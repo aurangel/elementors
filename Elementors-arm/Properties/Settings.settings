@@ -5,5 +5,8 @@
     <Setting Name="Skin" Type="System.String" Scope="User">
       <Value Profile="(Default)">Office 2013</Value>
     </Setting>
+    <Setting Name="cbCollection" Type="System.Collections.ArrayList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

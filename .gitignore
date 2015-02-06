@@ -154,5 +154,5 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-Elementors-arm/Elementors-arm.csproj
 *.csproj
+Elementors-arm/Elementors-arm.csproj

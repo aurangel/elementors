@@ -35,11 +35,12 @@
             this.applicationMenu = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.dxHome = new DevExpress.XtraBars.BarButtonItem();
             this.barAndDockingController = new DevExpress.XtraBars.BarAndDockingController(this.components);
-            this.dxReset = new DevExpress.XtraBars.BarButtonItem();
             this.dxSearch = new DevExpress.XtraBars.BarButtonItem();
             this.dxName = new DevExpress.XtraBars.BarEditItem();
             this.dxTemplate = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.tabHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.dxbActions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -75,12 +76,13 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.dxHome,
-            this.dxReset,
             this.dxSearch,
             this.dxName,
-            this.dxTemplate});
+            this.dxTemplate,
+            this.barButtonItem1,
+            this.barButtonItem2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 13;
+            this.ribbon.MaxItemId = 15;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.tabHome});
@@ -90,7 +92,7 @@
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(690, 149);
+            this.ribbon.Size = new System.Drawing.Size(698, 149);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -129,15 +131,6 @@
             this.barAndDockingController.PropertiesBar.AllowLinkLighting = false;
             this.barAndDockingController.PropertiesBar.DefaultGlyphSize = new System.Drawing.Size(16, 16);
             this.barAndDockingController.PropertiesBar.DefaultLargeGlyphSize = new System.Drawing.Size(32, 32);
-            // 
-            // dxReset
-            // 
-            this.dxReset.Caption = "Сброс";
-            this.dxReset.Glyph = ((System.Drawing.Image)(resources.GetObject("dxReset.Glyph")));
-            this.dxReset.Id = 3;
-            this.dxReset.Name = "dxReset";
-            this.dxReset.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.dxReset.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.dxReset_ItemClick);
             // 
             // dxSearch
             // 
@@ -182,14 +175,27 @@
             this.repositoryItemComboBox1.AutoHeight = false;
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox1.Items.AddRange(new object[] {
-            "Давыдова А.А.",
-            "Демина Г.Н.",
-            "Дроздова Л.И.",
-            "Клюйкова Н.В.",
-            "Самойлова Е.В.",
-            "Семенова Е.В."});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Добавить шаблон";
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Id = 13;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Удалить всех";
+            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
+            this.barButtonItem2.Id = 14;
+            this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // tabHome
             // 
@@ -201,10 +207,11 @@
             // dxbActions
             // 
             this.dxbActions.ItemLinks.Add(this.dxHome, true);
-            this.dxbActions.ItemLinks.Add(this.dxReset, true);
+            this.dxbActions.ItemLinks.Add(this.barButtonItem2, true);
             this.dxbActions.ItemLinks.Add(this.dxSearch, true);
             this.dxbActions.ItemLinks.Add(this.dxName);
             this.dxbActions.ItemLinks.Add(this.dxTemplate);
+            this.dxbActions.ItemLinks.Add(this.barButtonItem1);
             this.dxbActions.Name = "dxbActions";
             this.dxbActions.ShowCaptionButton = false;
             this.dxbActions.Text = "Действия";
@@ -223,7 +230,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 488);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(690, 23);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(698, 23);
             // 
             // barEditItem1
             // 
@@ -243,9 +250,8 @@
             this.gridControl.MenuManager = this.ribbon;
             this.gridControl.MinimumSize = new System.Drawing.Size(400, 200);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(690, 339);
+            this.gridControl.Size = new System.Drawing.Size(698, 339);
             this.gridControl.TabIndex = 8;
-            this.gridControl.UseEmbeddedNavigator = true;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
@@ -291,19 +297,21 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 511);
+            this.ClientSize = new System.Drawing.Size(698, 511);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.InactiveGlowColor = System.Drawing.Color.Red;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(604, 400);
+            this.MinimumSize = new System.Drawing.Size(596, 400);
             this.Name = "SearchForm";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Поиск по инициалам";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SearchForm_FormClosing);
+            this.Load += new System.EventHandler(this.SearchForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu)).EndInit();
@@ -323,7 +331,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage tabHome;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup dxbActions;
         private DevExpress.XtraBars.BarButtonItem dxHome;
-        private DevExpress.XtraBars.BarButtonItem dxReset;
         private DevExpress.XtraBars.BarButtonItem dxSearch;
         private DevExpress.XtraBars.BarEditItem dxName;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
@@ -336,5 +343,7 @@
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }

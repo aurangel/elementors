@@ -56,7 +56,7 @@
             this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbon.Size = new System.Drawing.Size(692, 32);
+            this.ribbon.Size = new System.Drawing.Size(700, 32);
             // 
             // barInfoItem
             // 
@@ -78,9 +78,8 @@
             this.gridControl.MenuManager = this.ribbon;
             this.gridControl.MinimumSize = new System.Drawing.Size(400, 200);
             this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(692, 364);
+            this.gridControl.Size = new System.Drawing.Size(700, 368);
             this.gridControl.TabIndex = 7;
-            this.gridControl.UseEmbeddedNavigator = true;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
@@ -109,7 +108,7 @@
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
             this.gridView.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplaceHideCurrentRow;
+            this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsDetail.AllowOnlyOneMasterRowExpanded = true;
             this.gridView.OptionsFind.AlwaysVisible = true;
             this.gridView.OptionsFind.FindDelay = 400;
@@ -133,7 +132,7 @@
             this.ActiveGlowColor = System.Drawing.Color.Blue;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 396);
+            this.ClientSize = new System.Drawing.Size(700, 400);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
