@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
@@ -31,7 +32,9 @@ namespace Elementors_arm
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2013");
+
             Application.Run(new HeaderForm());
         }
+
     }
 }

@@ -19,8 +19,6 @@ namespace Elementors_arm
             InitializeComponent();
         }
 
-        private string connectionString; /* Переменная для строки подключения */
-
         private void InfoForm_Load(object sender, EventArgs e)
         {
             DBOperator dbOperator = DBOperator.Instance;

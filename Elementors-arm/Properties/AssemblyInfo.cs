@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Resources;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -8,8 +9,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Elementors Arm")]
 [assembly: AssemblyDescription("Automated workspace")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ATK")]
-[assembly: AssemblyProduct("Elementors-arm")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Elementors Arm")]
 [assembly: AssemblyCopyright("Copyright © Vlasenko 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -34,3 +35,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.2")]
 [assembly: AssemblyFileVersion("1.0.2")]
+[assembly: NeutralResourcesLanguageAttribute("ru-RU")]

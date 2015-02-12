@@ -46,7 +46,7 @@
             this.marqueeProgressBarControl1.EditValue = 0;
             this.marqueeProgressBarControl1.Location = new System.Drawing.Point(23, 361);
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
-            this.marqueeProgressBarControl1.Properties.MarqueeAnimationSpeed = 50;
+            this.marqueeProgressBarControl1.Properties.MarqueeAnimationSpeed = 40;
             this.marqueeProgressBarControl1.Properties.ProgressAnimationMode = DevExpress.Utils.Drawing.ProgressAnimationMode.PingPong;
             this.marqueeProgressBarControl1.Size = new System.Drawing.Size(630, 27);
             this.marqueeProgressBarControl1.TabIndex = 5;
@@ -85,7 +85,6 @@
             // 
             // defaultLookAndFeel
             // 
-            this.defaultLookAndFeel.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.defaultLookAndFeel.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.Transparent;
             this.defaultLookAndFeel.LookAndFeel.SkinName = "Office 2013";
             this.defaultLookAndFeel.LookAndFeel.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.False;

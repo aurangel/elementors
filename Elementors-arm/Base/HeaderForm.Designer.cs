@@ -35,9 +35,9 @@
             this.backstageView = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.barAndDockingController = new DevExpress.XtraBars.BarAndDockingController(this.components);
             this.backstageViewClientControl2 = new DevExpress.XtraBars.Ribbon.BackstageViewClientControl();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.tiAbout = new DevExpress.XtraBars.Ribbon.BackstageViewTabItem();
+            this.backstageViewButtonItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.dxDefault = new DevExpress.XtraBars.BarButtonItem();
             this.dxCloseAll = new DevExpress.XtraBars.BarButtonItem();
             this.dxSearchName = new DevExpress.XtraBars.BarButtonItem();
@@ -143,6 +143,7 @@
             this.backstageView.Controls.Add(this.backstageViewClientControl2);
             this.backstageView.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backstageView.Items.Add(this.tiAbout);
+            this.backstageView.Items.Add(this.backstageViewButtonItem1);
             this.backstageView.Location = new System.Drawing.Point(300, 151);
             this.backstageView.Name = "backstageView";
             this.backstageView.Ribbon = this.ribbon;
@@ -176,26 +177,11 @@
             this.backstageViewClientControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.backstageViewClientControl2.Appearance.BackColor2 = System.Drawing.Color.Transparent;
             this.backstageViewClientControl2.Appearance.Options.UseBackColor = true;
-            this.backstageViewClientControl2.Controls.Add(this.linkLabel1);
             this.backstageViewClientControl2.Controls.Add(this.pictureBox);
             this.backstageViewClientControl2.Location = new System.Drawing.Point(174, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
             this.backstageViewClientControl2.Size = new System.Drawing.Size(677, 413);
             this.backstageViewClientControl2.TabIndex = 1;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Blue;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(13, 16);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(86, 16);
-            this.linkLabel1.TabIndex = 2;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "CHM-справка";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox
             // 
@@ -221,6 +207,13 @@
             this.tiAbout.Glyph = ((System.Drawing.Image)(resources.GetObject("tiAbout.Glyph")));
             this.tiAbout.Name = "tiAbout";
             this.tiAbout.Selected = true;
+            // 
+            // backstageViewButtonItem1
+            // 
+            this.backstageViewButtonItem1.Caption = "CHM-справка";
+            this.backstageViewButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("backstageViewButtonItem1.Glyph")));
+            this.backstageViewButtonItem1.Name = "backstageViewButtonItem1";
+            this.backstageViewButtonItem1.ItemClick += new DevExpress.XtraBars.Ribbon.BackstageViewItemEventHandler(this.backstageViewButtonItem1_ItemClick);
             // 
             // dxDefault
             // 
@@ -624,7 +617,6 @@
             this.backstageView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController)).EndInit();
             this.backstageViewClientControl2.ResumeLayout(false);
-            this.backstageViewClientControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemZoomTrackBar1)).EndInit();
@@ -687,8 +679,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemZoomTrackBar repositoryItemZoomTrackBar1;
         private DevExpress.XtraBars.BarButtonItem bbAbout;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Ribbon.BackstageViewButtonItem backstageViewButtonItem1;
 
     }
 }

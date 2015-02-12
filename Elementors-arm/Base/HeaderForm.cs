@@ -151,7 +151,7 @@ namespace Elementors_arm
 
         private void dxReportDesigner_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SplashScreenManager.ShowForm(this, typeof(Base.WaitForm1), true, true, false);
+            SplashScreenManager.ShowForm(this, typeof(Base.Waiting), true, true, false);
 
             for (int i = 1; i <= 100; i++)
             {
@@ -182,41 +182,56 @@ namespace Elementors_arm
             Data.ValueOfDoc = e.Document.Caption;
         }
 
-        public void LoadReport()
-        {
-            Reports.PreviewReport preview = new Reports.PreviewReport();
-
-            XtraReport report = new XtraReport();
-            preview.documentViewerRibbon.DocumentViewer.DocumentSource = report;
-
-            report.CreateDocument();
-            report.LoadLayout(Data.ValueOfReport);
-            preview.Text = nbMain.PressedLink.Caption;
-            preview.Show();
-        }
-
         private void docTitulList_LinkPressed(object sender, NavBarLinkEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(Base.Waiting), true, true, false);
             Data.ValueOfReport = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TitulList.repx");
-            LoadReport();
+
+            XtraReport report = new XtraReport();
+            ReportPrintTool printTool = new ReportPrintTool(report);
+
+            ((XtraReport)printTool.Report).LoadLayout(Data.ValueOfReport);
+            SplashScreenManager.CloseForm(false);
+            printTool.ShowPreviewDialog();
         }
 
         private void docRatingMark_LinkPressed(object sender, NavBarLinkEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(Base.Waiting), true, true, false);
             Data.ValueOfReport = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "RatingMark.repx");
-            LoadReport();
+
+            XtraReport report = new XtraReport();
+            ReportPrintTool printTool = new ReportPrintTool(report);
+
+            ((XtraReport)printTool.Report).LoadLayout(Data.ValueOfReport);
+            SplashScreenManager.CloseForm(false);
+            printTool.ShowPreviewDialog();
         }
 
         private void docBookAllTeachers_LinkPressed(object sender, NavBarLinkEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(Base.Waiting), true, true, false);
             Data.ValueOfReport = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AllPrepods.repx");
-            LoadReport();
+
+            XtraReport report = new XtraReport();
+            ReportPrintTool printTool = new ReportPrintTool(report);
+
+            ((XtraReport)printTool.Report).LoadLayout(Data.ValueOfReport);
+            SplashScreenManager.CloseForm(false);
+            printTool.ShowPreviewDialog();
         }
 
         private void docBookRating_LinkPressed(object sender, NavBarLinkEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(Base.Waiting), true, true, false);
             Data.ValueOfReport = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AllRating.repx");
-            LoadReport();
+
+            XtraReport report = new XtraReport();
+            ReportPrintTool printTool = new ReportPrintTool(report);
+
+            ((XtraReport)printTool.Report).LoadLayout(Data.ValueOfReport);
+            SplashScreenManager.CloseForm(false);
+            printTool.ShowPreviewDialog();
         }
 
         private void dxKnowledgeBase_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -234,12 +249,6 @@ namespace Elementors_arm
         private void dxSource_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Exoticness/Elementors-arm");
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            string PathToHelp = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "help/Help.chm");
-            Help.ShowHelp(this, PathToHelp);
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -264,6 +273,12 @@ namespace Elementors_arm
         {
             Base.AboutForm about = new Base.AboutForm();
             about.Show();
+        }
+
+        private void backstageViewButtonItem1_ItemClick(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
+        {
+            string PathToHelp = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "help/Help.chm");
+            Help.ShowHelp(this, PathToHelp);
         }
 
     }
