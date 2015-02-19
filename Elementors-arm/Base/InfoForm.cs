@@ -23,7 +23,9 @@ namespace Elementors_arm
         {
             DBOperator dbOperator = DBOperator.Instance;
             gridControl.DataSource = dbOperator.Information();
-            gridView.BestFitColumns(); /* Оптимизированная ширина колонок */
+            //Устанавливает источник данных для сетки из возвращенного значения функции
+            gridView.BestFitColumns();
+            //Регулирует ширину столбцов так, чтобы столбцы соответствовали их содержанию оптимальным образом
         }
 
     }

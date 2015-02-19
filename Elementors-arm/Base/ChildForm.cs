@@ -30,49 +30,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Base;
-using System.Data.Common;
-using System.Data.SQLite;
-using System.Data;
-
 namespace Elementors_arm
 {
 
     public partial class ChildForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private string tableName;
+        //Строковая переменная для хранения имени таблицы
         public ChildForm(string dtName)
         {
             InitializeComponent();
             this.Load += new EventHandler(ChildForm_Load);
+            //Генерация события до первоначального отображения формы
             tableName = dtName;
+            //В глобальную переменную вносится имя таблицы
         }
 
         void ChildForm_Load(object sender, EventArgs e)
         {
             DBOperator dbOperator = DBOperator.Instance;
             gridControl.DataSource = dbOperator.GetTableByName(tableName);
+            //Устанавливает источник данных для сетки из возвращенного значения функции
             gridView.BestFitColumns();
+            //Регулирует ширину столбцов так, чтобы столбцы соответствовали их содержанию оптимальным образом
         }
 
         private void gridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             if (Data.ValueOfDoc == "Преподаватели")
-            {
+            { //Проверка условия на таблицу, с которой сейчас взаимодействует пользователь
                 if (e.Button == MouseButtons.Right)
                     popupMenu.ShowPopup(Control.MousePosition);
+                    //Показывает всплывающее меню в заданной точке экрана
             }
 
             else return;
 
             Data.ValueOfPrepod = e.RowHandle + 1;
+            //Передача указателя строки сетки в глобальную переменную
         }
 
         private void barInfoItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             InfoForm infoForm = new InfoForm();
             infoForm.Show();
+            //Отображает форму о конкретном преподавателе для пользователя
         }
     }
 }

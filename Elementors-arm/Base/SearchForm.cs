@@ -18,15 +18,17 @@ namespace Elementors_arm
             DBOperator dbOperator = DBOperator.Instance;
 
             gridControl.DataSource = dbOperator.Search();
-            gridView.BestFitColumns(); /* Оптимизированная ширина колонок */
+            //Устанавливает источник данных для сетки из возвращенного значения функции
+            gridView.BestFitColumns();
+            //Регулирует ширину столбцов так, чтобы столбцы соответствовали их содержанию оптимальным образом
         }
 
         private void dxTemplate_EditValueChanged(object sender, EventArgs e)
         {
-            if (dxTemplate.EditValue == null) /* Проверка доступности */
-                dxSearch.Enabled = false;
+            if (dxTemplate.EditValue == null) //Проверяет значение, указывающее, является ли элемент пустым
+                dxSearch.Enabled = false; //Запрет на активацию кнопки
             else
-                dxSearch.Enabled = true;
+                dxSearch.Enabled = true; //Доступ
         }
 
         private void dxHome_ItemClick(object sender, ItemClickEventArgs e)
@@ -37,13 +39,16 @@ namespace Elementors_arm
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             string item = dxTemplate.EditValue.ToString();
+            //Отредактированное значение в текущем редакторе преобразуется в строку
             ((DevExpress.XtraEditors.Repository.RepositoryItemComboBox)this.dxTemplate.Edit).Items.Add(item);
+            //Добавляет новый элемент в текущую коллекцию шаблонов преподавателей
         }
 
         private void SearchForm_Load(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.cbCollection != null)
                 ((DevExpress.XtraEditors.Repository.RepositoryItemComboBox)this.dxTemplate.Edit).Items.AddRange(Properties.Settings.Default.cbCollection.ToArray());
+                //Копирование элементов списка в массив коллекции
         }
 
         private void SearchForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
@@ -56,6 +61,7 @@ namespace Elementors_arm
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
             ((DevExpress.XtraEditors.Repository.RepositoryItemComboBox)this.dxTemplate.Edit).Items.Clear();
+            //Удаляет все объекты из экземпляра класса
         }
     }
 }
