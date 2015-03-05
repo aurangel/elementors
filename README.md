@@ -1,6 +1,6 @@
 # Elementors-ARM
 
-[![Build Status](https://travis-ci.org/Exoticness/Elementors-arm.svg?branch=master)](https://travis-ci.org/Exoticness/Elementors-arm)
+[![Build Status](https://travis-ci.org/Exoticness/Elementors-arm.svg?branch=master)](https://travis-ci.org/Exoticness/Elementors-arm) [![Latest Stable Version](https://poser.pugx.org/leaphly/cart-bundle/version.svg)](https://packagist.org/packages/leaphly/cart-bundle)
 
 Программа носит характер автоматизированного рабочего места (АРМ) председателя цикловой комиссии.
 
