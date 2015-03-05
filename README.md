@@ -10,7 +10,7 @@
 
 - SQLite 3
 
-## Для работы приложения требуется .NET Framework 4!
+## Требуется .NET Framework 4!
 
 Приложение разработано в Visual Studio 2013 с использованием DevExpress 14. Для полного функционирования разархивируйте help.zip (веб-справка) и sqlite_app.zip (SQLite дизайнер) в /bin/Release.
 
