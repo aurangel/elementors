@@ -1,16 +1,32 @@
 {
+    "name": "vendor-name/project-name",
+    "description": "This is a very cool package!",
+    "version": "0.3.0",
+    "type": "library",
+    "keywords": ["logging", "cool", "awesome"],
+    "homepage": "http://jolicode.com",
+    "time": "2012-12-21",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Nils Adermann",
-            "email": "naderman@naderman.de",
-            "homepage": "http://www.naderman.de",
+            "name": "Xavier Lacot",
+            "email": "xlacot@jolicode.com",
+            "homepage": "http://www.lacot.org",
             "role": "Developer"
         },
         {
-            "name": "Jordi Boggiano",
-            "email": "j.boggiano@seld.be",
-            "homepage": "http://seld.be",
+            "name": "Benjamin Clay",
+            "email": "bclay@jolicode.com",
+            "homepage": "http://ternel.net",
             "role": "Developer"
         }
-    ]
+    ],
+    "support": {
+        "email": "support@exemple.org",
+        "issues": "https://github.com/jolicode/GouvCamp-mobile/issues",
+        "forum": "http://www.my-forum.com/",
+        "wiki": "http://www.my-wiki.com/",
+        "irc": "irc://irc.freenode.org/composer",
+        "source": "https://github.com/jolicode/GouvCamp-mobile"
+    }
 }
