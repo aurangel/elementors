@@ -10,7 +10,7 @@
 
 ## Standalone installer
 
-Также в репозитории имеется альтернативный (автономный) установочный файл Elementors ARM.exe. Его исходники расположены в `../Extras/Inno Script/`. Для удачной компиляции потребуется Inno Setup 5.5.1 Unicode & Inno Setup Compiler 5.5.1.
+Также в репозитории имеется альтернативный (автономный) установочный файл Elementors ARM.exe. Его исходники расположены в `../Extras/Inno Script/`. Для удачной компиляции потребуется **Inno Setup 5.5.1 Unicode & Inno Setup Compiler 5.5.1**.
 
 ## Библиотеки:
 
