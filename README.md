@@ -1,6 +1,6 @@
 # Elementors-ARM
 
-[![Code Climate](https://codeclimate.com/github/symphonycms/symphony-2.png)](https://codeclimate.com/github/symphonycms/symphony-2)
+[![Build Status](https://travis-ci.org/Exoticness/Elementors-arm.svg)](https://travis-ci.org/Exoticness/Elementors-arm)
 
 Программа носит характер автоматизированного рабочего места (АРМ) председателя цикловой комиссии.
 
