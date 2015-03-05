@@ -1,5 +1,5 @@
 language: csharp
 solution: Elementors-arm.sln
-
 install:
-  - sudo apt-get install nunit-console
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore Elementors-arm.sln
