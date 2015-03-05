@@ -1,17 +1,12 @@
 {
-    "name": "vendor-name/project-name",
-    "description": "This is a very cool package!",
-    "version": "0.3.0",
-    "type": "library",
-    "keywords": ["logging", "cool", "awesome"],
-    "homepage": "http://jolicode.com",
-    "time": "2012-12-21",
-    "license": "MIT",
-    "support": {
-        "email": "support@exemple.org",
-        "issues": "https://github.com/jolicode/GouvCamp-mobile/issues",
-        "forum": "http://www.my-forum.com/",
-        "wiki": "http://www.my-wiki.com/",
-        "irc": "irc://irc.freenode.org/composer",
-        "source": "https://github.com/jolicode/GouvCamp-mobile"
-    }
+	"name" : "Elementors/Elementors ARM",
+	"description" : "Coolest!",
+	"keywords" : [ "open graph", "oembed", "discovery" ],
+	"authors": [
+		{
+			"name": "Roman Vlasenko",
+			"email": "admiralexo@gmail.com"
+		}
+	],
+	"license" : "GNU GPL 3"
+}
