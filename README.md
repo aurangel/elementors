@@ -6,7 +6,7 @@
 
 ## Требуется .NET Framework 4!
 
-Приложение разработано в Visual Studio 2013 с использованием DevExpress 14. Для полного функционирования разархивируйте help.zip (веб-справка) и sqlite_app.zip (SQLite дизайнер) в /bin/Release.
+Приложение разработано в Visual Studio 2013 с использованием библиотек DevExpress 14. Для полного функционирования разархивируйте help.zip (веб-справка) и sqlite_app.zip (SQLite дизайнер) в `../bin/Release`.
 
 ## Standalone installer
 
