@@ -1,37 +1,37 @@
-; Название игры
+п»ї; РќР°Р·РІР°РЅРёРµ РёРіСЂС‹
 #define AppName "Elementors ARM"
-; Версия игры
+; Р’РµСЂСЃРёСЏ РёРіСЂС‹
 #define AppVersion "1.0"
-; Издатель
+; РР·РґР°С‚РµР»СЊ
 #define AppPublisher "Vlasenko"
-; Имя главного запусакаемого файла
+; РРјСЏ РіР»Р°РІРЅРѕРіРѕ Р·Р°РїСѓСЃР°РєР°РµРјРѕРіРѕ С„Р°Р№Р»Р°
 #define AppExeName "Elementors Arm.exe"
-; Рабочий каталог запускаемого файла(если не корень {app}, то слэш обязателен)
+; Р Р°Р±РѕС‡РёР№ РєР°С‚Р°Р»РѕРі Р·Р°РїСѓСЃРєР°РµРјРѕРіРѕ С„Р°Р№Р»Р°(РµСЃР»Рё РЅРµ РєРѕСЂРµРЅСЊ {app}, С‚Рѕ СЃР»СЌС€ РѕР±СЏР·Р°С‚РµР»РµРЅ)
 ;#define AppExeWorkingDir "bin\"
 #define AppExeWorkingDir ""
-; Стандартная папка для установки
+; РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ РїР°РїРєР° РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё
 #define DefaultDir "{pf}"
-; Необходимый обьем памяти на HDD
+; РќРµРѕР±С…РѕРґРёРјС‹Р№ РѕР±СЊРµРј РїР°РјСЏС‚Рё РЅР° HDD
 #define NeedSize "100"
-; Сколько необходимо оперативной памяти для расспаковки
+; РЎРєРѕР»СЊРєРѕ РЅРµРѕР±С…РѕРґРёРјРѕ РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё РґР»СЏ СЂР°СЃСЃРїР°РєРѕРІРєРё
 #define NeedMem 132
-; Удаление сохранений
+; РЈРґР°Р»РµРЅРёРµ СЃРѕС…СЂР°РЅРµРЅРёР№
 ;#define DelSave
 #ifdef DelSave
-; Папка сохранений
+; РџР°РїРєР° СЃРѕС…СЂР°РЅРµРЅРёР№
   #define SavePath ""
 #endif
 
-; Ярлык в обозревателе игр
+; РЇСЂР»С‹Рє РІ РѕР±РѕР·СЂРµРІР°С‚РµР»Рµ РёРіСЂ
 #define GameExplorer
 #ifdef GameExplorer
-; Имя библиотеки
+; РРјСЏ Р±РёР±Р»РёРѕС‚РµРєРё
   #define GDFBinary "L_GDF.dll"
 #endif
 
-; Нужны ли компоненты
+; РќСѓР¶РЅС‹ Р»Рё РєРѕРјРїРѕРЅРµРЅС‚С‹
 #define Components
-; Нужно ли дополнительное програмное обеспечение
+; РќСѓР¶РЅРѕ Р»Рё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРµ РїСЂРѕРіСЂР°РјРЅРѕРµ РѕР±РµСЃРїРµС‡РµРЅРёРµ
 #define Soft
 #ifdef Soft
   #define DirectX
@@ -48,22 +48,22 @@
 ;#define XDelta
 ;#define PackZIP
 
-; Шрифт инсталлятора
+; РЁСЂРёС„С‚ РёРЅСЃС‚Р°Р»Р»СЏС‚РѕСЂР°
 #define FontName "Candara"
-; Главный цвет текста
+; Р“Р»Р°РІРЅС‹Р№ С†РІРµС‚ С‚РµРєСЃС‚Р°
 #define FirstColor "$ffffff"
-; Второй цвет текста
+; Р’С‚РѕСЂРѕР№ С†РІРµС‚ С‚РµРєСЃС‚Р°
 #define SecondColor "$dcbb5f"
-; Главный цвет текста на кнопках
+; Р“Р»Р°РІРЅС‹Р№ С†РІРµС‚ С‚РµРєСЃС‚Р° РЅР° РєРЅРѕРїРєР°С…
 #define BtnFirstColor "$ffffff"
-; Цвет текста на кнопках при нажатии
+; Р¦РІРµС‚ С‚РµРєСЃС‚Р° РЅР° РєРЅРѕРїРєР°С… РїСЂРё РЅР°Р¶Р°С‚РёРё
 #define BtnSecondColor "$808080"
-; Цвет фона
+; Р¦РІРµС‚ С„РѕРЅР°
 #define BackgroundColor "clWindowFrame"
-; Затемненный цвет фона (используется в компонентлисте)
+; Р—Р°С‚РµРјРЅРµРЅРЅС‹Р№ С†РІРµС‚ С„РѕРЅР° (РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РєРѕРјРїРѕРЅРµРЅС‚Р»РёСЃС‚Рµ)
 #define ShadowedBackgroundColor "$282828"
 
-; Запрет русских символов в пути
+; Р—Р°РїСЂРµС‚ СЂСѓСЃСЃРєРёС… СЃРёРјРІРѕР»РѕРІ РІ РїСѓС‚Рё
 ;#define RussianChars
 
 #define Time GetDateTimeString('dd/mm/yyyy hh:nn', '-', ':')
@@ -116,7 +116,7 @@ Source: files\WinTB.dll; Flags: dontcopy; Attribs: hidden system;
 Source: files\b2p.dll; Flags: dontcopy; Attribs: hidden system;
 Source: files\botva2.dll; Flags: dontcopy; Attribs: hidden system;
 Source: files\botva2\*; Flags: dontcopy
-Source: "D:\Program\S\Deploy\Ит планета\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\Program\S\Deploy\РС‚ РїР»Р°РЅРµС‚Р°\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Types]
 Name: full; Description: Full installation; Flags: iscustom
@@ -127,29 +127,29 @@ Name: {group}\{cm:UninstallProgram,{#AppName}}; Filename: {uninstallexe}
 Name: {commondesktop}\{#AppName}; Filename: {app}\{#AppExeName}; Components: icons\desktopicon
 
 [Components]
-Name: icons; Description: Дополнительные иконки; Types: full;
-Name: icons\desktopicon; Description: Иконка на робочем столе; Types: full;
-Name: icons\quicklaunchicon; Description: Иконка на панели быстрого доступа; OnlyBelowVersion: 0,6.1; Types: full;
-Name: icons\quicklaunchicon7; Description: Иконка на панели быстрого доступа; MinVersion: 0,6.1; Types: full;
+Name: icons; Description: Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РёРєРѕРЅРєРё; Types: full;
+Name: icons\desktopicon; Description: РРєРѕРЅРєР° РЅР° СЂРѕР±РѕС‡РµРј СЃС‚РѕР»Рµ; Types: full;
+Name: icons\quicklaunchicon; Description: РРєРѕРЅРєР° РЅР° РїР°РЅРµР»Рё Р±С‹СЃС‚СЂРѕРіРѕ РґРѕСЃС‚СѓРїР°; OnlyBelowVersion: 0,6.1; Types: full;
+Name: icons\quicklaunchicon7; Description: РРєРѕРЅРєР° РЅР° РїР°РЅРµР»Рё Р±С‹СЃС‚СЂРѕРіРѕ РґРѕСЃС‚СѓРїР°; MinVersion: 0,6.1; Types: full;
 #ifdef GameExplorer
-Name: icons\gameux; Description: 'Иконка в программном стеке';
+Name: icons\gameux; Description: 'РРєРѕРЅРєР° РІ РїСЂРѕРіСЂР°РјРјРЅРѕРј СЃС‚РµРєРµ';
 #endif
 #ifdef Components
-Name: language; Description: Язык интерфейса:; Types: full; Flags:fixed;
-Name: language\ru; Description: Русский; Flags: exclusive;
-Name: language\uk; Description: Английский; Flags: exclusive;
-Name: language\br; Description: Бразильский; Flags: exclusive;
-Name: language\de; Description: Немецкий; Flags: exclusive;
-Name: language\es; Description: Испанский; Flags: exclusive;
-Name: language\fr; Description: Французcкий; Flags: exclusive;
-Name: language\it; Description: Итальянский; Flags: exclusive;
-Name: language\ja; Description: Японский; Flags: exclusive;
-Name: language\ko; Description: Корейский; Flags: exclusive;
-Name: language\pl; Description: Польский; Flags: exclusive;
-Name: language\pt; Description: Португальский; Flags: exclusive;
-Name: language\sz; Description: Сычуаньский; Flags: exclusive;
-Name: language\tr; Description: Турецкий; Flags: exclusive;
-Name: language\zh; Description: Китайский; Flags: exclusive;
+Name: language; Description: РЇР·С‹Рє РёРЅС‚РµСЂС„РµР№СЃР°:; Types: full; Flags:fixed;
+Name: language\ru; Description: Р СѓСЃСЃРєРёР№; Flags: exclusive;
+Name: language\uk; Description: РђРЅРіР»РёР№СЃРєРёР№; Flags: exclusive;
+Name: language\br; Description: Р‘СЂР°Р·РёР»СЊСЃРєРёР№; Flags: exclusive;
+Name: language\de; Description: РќРµРјРµС†РєРёР№; Flags: exclusive;
+Name: language\es; Description: РСЃРїР°РЅСЃРєРёР№; Flags: exclusive;
+Name: language\fr; Description: Р¤СЂР°РЅС†СѓР·cРєРёР№; Flags: exclusive;
+Name: language\it; Description: РС‚Р°Р»СЊСЏРЅСЃРєРёР№; Flags: exclusive;
+Name: language\ja; Description: РЇРїРѕРЅСЃРєРёР№; Flags: exclusive;
+Name: language\ko; Description: РљРѕСЂРµР№СЃРєРёР№; Flags: exclusive;
+Name: language\pl; Description: РџРѕР»СЊСЃРєРёР№; Flags: exclusive;
+Name: language\pt; Description: РџРѕСЂС‚СѓРіР°Р»СЊСЃРєРёР№; Flags: exclusive;
+Name: language\sz; Description: РЎС‹С‡СѓР°РЅСЊСЃРєРёР№; Flags: exclusive;
+Name: language\tr; Description: РўСѓСЂРµС†РєРёР№; Flags: exclusive;
+Name: language\zh; Description: РљРёС‚Р°Р№СЃРєРёР№; Flags: exclusive;
 #endif
 
 [UninstallDelete]
@@ -218,7 +218,7 @@ begin
     GetSpaceOnDisk(ExtractFileDrive(WizardForm.DirEdit.Text), True, FreeSpace, TotalSpace);
     NeedSpace := {#NeedSize};
 
-  //проверяем доступное место на жестком диске
+  //РїСЂРѕРІРµСЂСЏРµРј РґРѕСЃС‚СѓРїРЅРѕРµ РјРµСЃС‚Рѕ РЅР° Р¶РµСЃС‚РєРѕРј РґРёСЃРєРµ
     if FreeSpace < NeedSpace then
       BtnSetEnabled(bNext,false)
     else
@@ -231,11 +231,11 @@ procedure Components();
 var
   i: integer;
 begin
-  for i := 0 to WizardForm.ComponentsList.ItemCount-1 do begin                          // Переименование компонентов
-    WizardForm.ComponentsList.ItemCaption[i] := GetWord('Component_' + IntToStr(i));    // на названия получамые из файла
-  end;                                                                                  // языка с дескриптором Component_НомерКомпонента
+  for i := 0 to WizardForm.ComponentsList.ItemCount-1 do begin                          // РџРµСЂРµРёРјРµРЅРѕРІР°РЅРёРµ РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
+    WizardForm.ComponentsList.ItemCaption[i] := GetWord('Component_' + IntToStr(i));    // РЅР° РЅР°Р·РІР°РЅРёСЏ РїРѕР»СѓС‡Р°РјС‹Рµ РёР· С„Р°Р№Р»Р°
+  end;                                                                                  // СЏР·С‹РєР° СЃ РґРµСЃРєСЂРёРїС‚РѕСЂРѕРј Component_РќРѕРјРµСЂРљРѕРјРїРѕРЅРµРЅС‚Р°
 
-// Не помешало бы что-то более универсальное
+// РќРµ РїРѕРјРµС€Р°Р»Рѕ Р±С‹ С‡С‚Рѕ-С‚Рѕ Р±РѕР»РµРµ СѓРЅРёРІРµСЂСЃР°Р»СЊРЅРѕРµ
 
 // *****************************************
 end;
@@ -335,7 +335,7 @@ begin
     BrowseText.Text := GroupTree.Directory;
   end;
 
-//---------- Кнопка "Ок" ----------//
+//---------- РљРЅРѕРїРєР° "РћРє" ----------//
   if bBtn = bDirBrowse then
     bBrowseOk := BtnCreate(BrowseForm.Handle,DirTree.Left - 18 / 2,DirTree.Top + DirTree.Height + 10,100,40,'button.png',18,false)
   else if bBtn = bGroupBrowse then
@@ -344,9 +344,9 @@ begin
   BtnSetFont(bBrowseOk,Font.Handle);
   BtnSetFontColor(bBrowseOk,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
   BtnSetEvent(bBrowseOk,BtnClickEventID,WrapBtnCallback(@TreeViewButtonsOnClick,1));
-//---------- Кнопка "Ок" ----------//
+//---------- РљРЅРѕРїРєР° "РћРє" ----------//
 
-//---------- Кнопка "Сброс" ----------//
+//---------- РљРЅРѕРїРєР° "РЎР±СЂРѕСЃ" ----------//
   if bBtn = bDirBrowse then
     bBrowseReset := BtnCreate(BrowseForm.Handle,DirTree.Left + 100 - 18 / 2,DirTree.Top + DirTree.Height + 10,100,40,'button.png',18,false)
   else if bBtn = bGroupBrowse then
@@ -355,9 +355,9 @@ begin
   BtnSetFont(bBrowseReset,Font.Handle);
   BtnSetFontColor(bBrowseReset,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
   BtnSetEvent(bBrowseReset,BtnClickEventID,WrapBtnCallback(@TreeViewButtonsOnClick,1));
-//---------- Кнопка "Сброс" ----------//
+//---------- РљРЅРѕРїРєР° "РЎР±СЂРѕСЃ" ----------//
 
-//---------- Кнопка "Создать папку" ----------//
+//---------- РљРЅРѕРїРєР° "РЎРѕР·РґР°С‚СЊ РїР°РїРєСѓ" ----------//
   if bBtn = bDirBrowse then
     bBrowseNew := BtnCreate(BrowseForm.Handle,DirTree.Left + 200 - 18 / 2,DirTree.Top + DirTree.Height + 10,100,40,'button.png',18,false)
   else if bBtn = bGroupBrowse then
@@ -366,9 +366,9 @@ begin
   BtnSetFont(bBrowseNew,Font.Handle);
   BtnSetFontColor(bBrowseNew,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
   BtnSetEvent(bBrowseNew,BtnClickEventID,WrapBtnCallback(@TreeViewButtonsOnClick,1));
-//---------- Кнопка "Создать папку" ----------//
+//---------- РљРЅРѕРїРєР° "РЎРѕР·РґР°С‚СЊ РїР°РїРєСѓ" ----------//
 
-//---------- Кнопка "Отмена" ----------//
+//---------- РљРЅРѕРїРєР° "РћС‚РјРµРЅР°" ----------//
   if bBtn = bDirBrowse then
     bBrowseCancel := BtnCreate(BrowseForm.Handle,DirTree.Left + 300 - 18 / 2,DirTree.Top + DirTree.Height + 10,100,40,'button.png',18,false)
   else if bBtn = bGroupBrowse then
@@ -377,7 +377,7 @@ begin
   BtnSetFont(bBrowseCancel,Font.Handle);
   BtnSetFontColor(bBrowseCancel,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
   BtnSetEvent(bBrowseCancel,BtnClickEventID,WrapBtnCallback(@TreeViewButtonsOnClick,1));
-//---------- Кнопка "Отмена" ----------//
+//---------- РљРЅРѕРїРєР° "РћС‚РјРµРЅР°" ----------//
 
   BrowseForm.ShowModal;
 end;
@@ -548,7 +548,7 @@ begin
   ExtractTemporaryFile('settings.ico');
   SendMessage(FSettings.Handle, $80, 0, LoadImage(0,ExpandConstant('{tmp}')+'\settings.ico',1,16,16,$1010));
 
-//*************Путь установки*************//
+//*************РџСѓС‚СЊ СѓСЃС‚Р°РЅРѕРІРєРё*************//
   DirSmallPanel := ImgLoad(FSettings.Handle,'panelsmall.png',20,30,0,0,false,true);
 
   ImgGetPosition(DirSmallPanel,tLeft,tTop,tWidth,tHeight);
@@ -580,16 +580,16 @@ begin
     Transparent  := true;
   end;
 
-//--------- Кнопка "Обзор" ----------//
+//--------- РљРЅРѕРїРєР° "РћР±Р·РѕСЂ" ----------//
   bDirBrowse := BtnCreate(FSettings.Handle,SDirLbl.Left + SDirLbl.Width,SDirLbl.Top - 10,100,40,'button.png',18,false);
   BtnSetEvent(bDirBrowse,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bDirBrowse,Font.Handle);
   BtnSetFontColor(bDirBrowse,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
   BtnSetText(bDirBrowse,GetWord('Browse'));
-//--------- Кнопка "Обзор" ----------//
-//*************Путь установки*************//
+//--------- РљРЅРѕРїРєР° "РћР±Р·РѕСЂ" ----------//
+//*************РџСѓС‚СЊ СѓСЃС‚Р°РЅРѕРІРєРё*************//
 
-//*************Папка в меню Пуск*************//
+//*************РџР°РїРєР° РІ РјРµРЅСЋ РџСѓСЃРє*************//
   GroupSmallPanel := ImgLoad(FSettings.Handle,'panelsmall.png',20,tTop + tHeight + 30,0,0,false,true);
   ImgGetPosition(GroupSmallPanel,tLeft,tTop,tWidth,tHeight);
 
@@ -622,13 +622,13 @@ begin
     Transparent    := true;
   end;
 
-//--------- Кнопка "Обзор" ----------//
+//--------- РљРЅРѕРїРєР° "РћР±Р·РѕСЂ" ----------//
   bGroupBrowse := BtnCreate(FSettings.Handle,SGroupLbl.Left + SGroupLbl.Width,SGroupLbl.Top - 10,100,40,'button.png',18,false);
   BtnSetEvent(bGroupBrowse,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bGroupBrowse,Font.Handle);
   BtnSetFontColor(bGroupBrowse,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
   BtnSetText(bGroupBrowse,GetWord('Browse'));
-//--------- Кнопка "Обзор" ----------//
+//--------- РљРЅРѕРїРєР° "РћР±Р·РѕСЂ" ----------//
   if BtnGetText(bGroupOnOff)=GetWord('DontCreate') then
   begin
     ButtonsOnClick(bGroupOnOff);
@@ -646,9 +646,9 @@ begin
     BtnSetFontColor(bGroupOnOff,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
     BtnSetText(bGroupOnOff,GetWord('Create'));
   end;
-    //*************Папка в меню Пуск*************//
+    //*************РџР°РїРєР° РІ РјРµРЅСЋ РџСѓСЃРє*************//
 //#ifdef Components
-//*************Компоненты*************//
+//*************РљРѕРјРїРѕРЅРµРЅС‚С‹*************//
   ComponentsPanel := ImgLoad(FSettings.Handle,'panelcomp.png',20,tTop + tHeight + 30,0,0,false,true);
   ImgGetPosition(ComponentsPanel,tLeft,tTop,tWidth,tHeight);
 
@@ -685,19 +685,19 @@ begin
     Left         := tLeft + 10;
     Width        := tWidth - 20;
     Height       := tTop - 60;
-    Color        := {#ShadowedBackgroundColor};    //изменяем если цвет фона другой
+    Color        := {#ShadowedBackgroundColor};    //РёР·РјРµРЅСЏРµРј РµСЃР»Рё С†РІРµС‚ С„РѕРЅР° РґСЂСѓРіРѕР№
     Font.Color   := {#FirstColor};
     //LoadBGBmpFromFile(ExpandConstant('{tmp}\background.bmp'),WizardForm.ComponentsList.Left + (WizardForm.ComponentsList.Width-WizardForm.ComponentsList.ClientWidth) div 2,WizardForm.ComponentsList.Top + (WizardForm.ComponentsList.Width-WizardForm.ComponentsList.ClientWidth) div 2);
   end;
-//*************Компоненты*************//
+//*************РљРѕРјРїРѕРЅРµРЅС‚С‹*************//
 //#endif
-//*************Кнопка "Закрыть"*************//
+//*************РљРЅРѕРїРєР° "Р—Р°РєСЂС‹С‚СЊ"*************//
   bFClose := BtnCreate(FSettings.Handle,tLeft +tWidth - 100 + 18/2,tTop + tHeight + 5,100,40,'button.png',18,false);
   BtnSetEvent(bFClose,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bFClose,Font.Handle);
   BtnSetFontColor(bFClose,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
   BtnSetText(bFClose,GetWord('Close'));
-//*************Кнопка "Закрыть"*************//
+//*************РљРЅРѕРїРєР° "Р—Р°РєСЂС‹С‚СЊ"*************//
 
   ImgApplyChanges(FSettings.Handle);
 end;
@@ -725,7 +725,7 @@ begin
   if CurPageID = wpReady then begin
     if not ((CompareStr(AnsiUppercase(WizardForm.DirEdit.Text), Uppercase(WizardForm.DirEdit.Text)) = 0)
     and(CompareStr(AnsiLowercase(WizardForm.DirEdit.Text), Lowercase(WizardForm.DirEdit.Text)) = 0)) then begin
-      MsgBox('В пути присутствуют русские символы', mbError, mb_OK); Result := False ;
+      MsgBox('Р’ РїСѓС‚Рё РїСЂРёСЃСѓС‚СЃС‚РІСѓСЋС‚ СЂСѓСЃСЃРєРёРµ СЃРёРјРІРѕР»С‹', mbError, mb_OK); Result := False ;
     end;
   end;
 end;
@@ -758,7 +758,7 @@ begin
       Transparent    := true;
       Parent         := AboutForm;
       Font.Height    := -18;
-      Caption := 'aLLeXUs © 2012' + #13#10 + GetWord('ReleaseDate') + ' {#Time}';
+      Caption := 'aLLeXUs В© 2012' + #13#10 + GetWord('ReleaseDate') + ' {#Time}';
     end;
     AboutForm.ShowModal;
   end;
@@ -805,8 +805,8 @@ end;
 
 procedure OnLangChange(lang: string; CurPageID: integer; Change: boolean);
 begin
-  if Change then ChangeLanguage(lang);                           // смена языка
-  if Change and ISInstallStep then ISDoneChangeLanguage(lang);   // смена языка ISDone
+  if Change then ChangeLanguage(lang);                           // СЃРјРµРЅР° СЏР·С‹РєР°
+  if Change and ISInstallStep then ISDoneChangeLanguage(lang);   // СЃРјРµРЅР° СЏР·С‹РєР° ISDone
 
   if CurPageID = wpWelcome then begin
     BtnSetText(bReInstall,GetWord('Reinstall'));
@@ -814,14 +814,14 @@ begin
     BtnSetText(bRun,GetWord('RunGame'));
     ExistsDirLbl[1].Caption := GetWord('ExistsLbl') + ' ';
     ExistsFormCount;
-    WizardForm.Caption := GetWord('Installing') + ' — ' + '{#AppName}';
+    WizardForm.Caption := GetWord('Installing') + ' вЂ” ' + '{#AppName}';
   end;
 
   if CurPageID = wpSelectProgramGroup then begin
     BtnSetText(bNext,GetWord('Next'));
     BtnSetText(bCancel,GetWord('Cancel'));
     WelcomeLbl.Caption := GetWord('WelcomePage1');
-    WizardForm.Caption := GetWord('Installing') + ' — ' + '{#AppName}';
+    WizardForm.Caption := GetWord('Installing') + ' вЂ” ' + '{#AppName}';
   end;
 
   if CurPageID = wpReady then begin
@@ -836,7 +836,7 @@ begin
     ReadyLblDir[4].Caption := MbOrTb({#NeedSize}) + ' ';
     ReadyLblDir[5].Caption := GetWord('ReadyPage4');
     Count(ReadyLblDir,'dir');
-    WizardForm.Caption := GetWord('Installing') + ' — ' + '{#AppName}';
+    WizardForm.Caption := GetWord('Installing') + ' вЂ” ' + '{#AppName}';
 
     #ifdef Components
     ReadyLblLang[1].Caption := GetWord('ReadyPage5') + ' ';
@@ -859,7 +859,7 @@ begin
     #endif
     Components;
 
-    //ReadyLblIcons[1].Caption := 'В следующих местах будут созданы ярлыки: ';
+    //ReadyLblIcons[1].Caption := 'Р’ СЃР»РµРґСѓСЋС‰РёС… РјРµСЃС‚Р°С… Р±СѓРґСѓС‚ СЃРѕР·РґР°РЅС‹ СЏСЂР»С‹РєРё: ';
     ReadyLblIcons[2].Caption := GetWord('Desktop');
     ReadyLblIcons[3].Caption := ' \ ';
     ReadyLblIcons[4].Caption := GetWord('StartMenu');
@@ -867,11 +867,11 @@ begin
     ReadyLblIcons[6].Caption := GetWord('GameExplorer');
     ReadyLblIcons[7].Caption := ' \ ';
     ReadyLblIcons[8].Caption := GetWord('QuickLaunch');
-    if ReadyLblIcons[2].Width <> 0 then WD := ReadyLblIcons[2].Width;     // ширина лейбла рабочего стола
-    if ReadyLblIcons[4].Width <> 0 then WS := ReadyLblIcons[4].Width;     // ширина лейбла пуск
-    if ReadyLblIcons[6].Width <> 0 then WGE := ReadyLblIcons[6].Width;    // ширина лейбла обозревателя игр
-    if ReadyLblIcons[8].Width <> 0 then WQL := ReadyLblIcons[8].Width;    // ширина лейбла быстрого запуска
-    if ReadyLblIcons[3].Width <> 0 then WSL := ReadyLblIcons[3].Width;    // ширина лейбла слэша
+    if ReadyLblIcons[2].Width <> 0 then WD := ReadyLblIcons[2].Width;     // С€РёСЂРёРЅР° Р»РµР№Р±Р»Р° СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°
+    if ReadyLblIcons[4].Width <> 0 then WS := ReadyLblIcons[4].Width;     // С€РёСЂРёРЅР° Р»РµР№Р±Р»Р° РїСѓСЃРє
+    if ReadyLblIcons[6].Width <> 0 then WGE := ReadyLblIcons[6].Width;    // С€РёСЂРёРЅР° Р»РµР№Р±Р»Р° РѕР±РѕР·СЂРµРІР°С‚РµР»СЏ РёРіСЂ
+    if ReadyLblIcons[8].Width <> 0 then WQL := ReadyLblIcons[8].Width;    // С€РёСЂРёРЅР° Р»РµР№Р±Р»Р° Р±С‹СЃС‚СЂРѕРіРѕ Р·Р°РїСѓСЃРєР°
+    if ReadyLblIcons[3].Width <> 0 then WSL := ReadyLblIcons[3].Width;    // С€РёСЂРёРЅР° Р»РµР№Р±Р»Р° СЃР»СЌС€Р°
 
     Count(ReadyLblIcons,'icons');
 
@@ -880,8 +880,8 @@ begin
     ReadyLblSoft[2].Caption := GetWord('DirectX');
     ReadyLblSoft[3].Caption := ' \ ';
     ReadyLblSoft[4].Caption := GetWord('VC');
-    if ReadyLblSoft[2].Width <> 0 then WDX := ReadyLblSoft[2].Width;   // условие исправило непонятную ошибку когда
-    if ReadyLblSoft[4].Width <> 0 then WVC := ReadyLblSoft[4].Width;   // здесь присваевалось нулевое значение
+    if ReadyLblSoft[2].Width <> 0 then WDX := ReadyLblSoft[2].Width;   // СѓСЃР»РѕРІРёРµ РёСЃРїСЂР°РІРёР»Рѕ РЅРµРїРѕРЅСЏС‚РЅСѓСЋ РѕС€РёР±РєСѓ РєРѕРіРґР°
+    if ReadyLblSoft[4].Width <> 0 then WVC := ReadyLblSoft[4].Width;   // Р·РґРµСЃСЊ РїСЂРёСЃРІР°РµРІР°Р»РѕСЃСЊ РЅСѓР»РµРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 
     Count(ReadyLblSoft,'soft');
 //    if IsComponentSelected('soft\directx') then begin
@@ -918,11 +918,11 @@ begin
   if CurPageID = wpFinished then begin
     if ISDoneError then begin
       WelcomeLbl.Caption := GetWord('InstallError');
-      WizardForm.Caption := GetWord('Installing') + ' — ' + '{#AppName}' + ' — ' + GetWord('InstError');
+      WizardForm.Caption := GetWord('Installing') + ' вЂ” ' + '{#AppName}' + ' вЂ” ' + GetWord('InstError');
     end else begin
       WelcomeLbl.Caption := GetWord('InstallDone') + ' ' + TimeToTime(AllTimeCount) + '.';
       BtnSetText(bRun,GetWord('RunGame'));
-      WizardForm.Caption := GetWord('Installing') + ' — ' + '{#AppName}' + ' — ' + GetWord('InstDone');
+      WizardForm.Caption := GetWord('Installing') + ' вЂ” ' + '{#AppName}' + ' вЂ” ' + GetWord('InstDone');
     end;
     BtnSetText(bNext,GetWord('Close'));
   end;
@@ -1005,11 +1005,11 @@ begin
   end;
 end;
 
-// Нажатие на крестик
+// РќР°Р¶Р°С‚РёРµ РЅР° РєСЂРµСЃС‚РёРє
 function CrossAction(h: hwnd; Msg, wParam, lParam: Longint): Longint;
 begin
   if (Msg = $0112) then begin
-    if (wParam = SC_CLOSE) then begin {действие при нажатии на крестик}
+    if (wParam = SC_CLOSE) then begin {РґРµР№СЃС‚РІРёРµ РїСЂРё РЅР°Р¶Р°С‚РёРё РЅР° РєСЂРµСЃС‚РёРє}
       ButtonsOnClick(bCancel);
       wParam := 0;
     end;
@@ -1040,16 +1040,16 @@ begin
   Font.Name := '{#FontName}';
   Font.Height := -12;
 
-//---------- Замена пункта меню 'О программе' ----------//
+//---------- Р—Р°РјРµРЅР° РїСѓРЅРєС‚Р° РјРµРЅСЋ 'Рћ РїСЂРѕРіСЂР°РјРјРµ' ----------//
   if not AppendMenu(GetSystemMenu(Wizardform.Handle, True), MF_DELETE, 0, GetWord('About')) then
     WizardForm.Position :=  poScreenCenter;
   AppendMenu(GetSystemMenu(Wizardform.Handle, False), MF_SEPARATOR, 0, '');
   Menu := TMenuItem.Create(WizardForm);
   AppendMenu(GetSystemMenu(Wizardform.Handle, False), MF_BYPOSITION, Menu.Handle, GetWord('About'));
   Application.OnMessage := @AppOnMessage;
-//---------- Замена пункта меню 'О программе' ----------//
+//---------- Р—Р°РјРµРЅР° РїСѓРЅРєС‚Р° РјРµРЅСЋ 'Рћ РїСЂРѕРіСЂР°РјРјРµ' ----------//
 
-// Нажатие на крестик
+// РќР°Р¶Р°С‚РёРµ РЅР° РєСЂРµСЃС‚РёРє
   OldProc := SetWindowLong(WizardForm.Handle, -4, CallbackAddr('CrossAction'));
 
   WizardForm.ClientWidth := 600;
@@ -1239,54 +1239,54 @@ begin
   //ImgApplyChanges(WizardForm.Handle);
   //isrus := true;
 
-//---------- Кнопка "Настройки" ----------//
+//---------- РљРЅРѕРїРєР° "РќР°СЃС‚СЂРѕР№РєРё" ----------//
   bSettings := BtnCreate(WizardForm.Handle,0,350,100,40,'button.png',18,false);
   BtnSetEvent(bSettings,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bSettings,Font.Handle);
   BtnSetFontColor(bSettings,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
-//---------- Кнопка "Настройки" ----------//
+//---------- РљРЅРѕРїРєР° "РќР°СЃС‚СЂРѕР№РєРё" ----------//
 
-//---------- Кнопка "Далее" ----------//
+//---------- РљРЅРѕРїРєР° "Р”Р°Р»РµРµ" ----------//
   bNext := BtnCreate(WizardForm.Handle,400,350,100,40,'button.png',18,false);
   BtnSetEvent(bNext,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bNext,Font.Handle);
   BtnSetFontColor(bNext,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
-//---------- Кнопка "Далее" ----------//
+//---------- РљРЅРѕРїРєР° "Р”Р°Р»РµРµ" ----------//
 
-//---------- Кнопка "Назад" ----------//
+//---------- РљРЅРѕРїРєР° "РќР°Р·Р°Рґ" ----------//
   bBack := BtnCreate(WizardForm.Handle,300,350,100,40,'button.png',18,false);
   BtnSetEvent(bBack,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bBack,Font.Handle);
   BtnSetFontColor(bBack,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
-//---------- Кнопка "Назад" ----------//
+//---------- РљРЅРѕРїРєР° "РќР°Р·Р°Рґ" ----------//
 
-//---------- Кнопка "Отмена" ----------//
+//---------- РљРЅРѕРїРєР° "РћС‚РјРµРЅР°" ----------//
   bCancel := BtnCreate(WizardForm.Handle,500,350,100,40,'button.png',18,false);
   BtnSetEvent(bCancel,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bCancel,Font.Handle);
   BtnSetFontColor(bCancel,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
-//---------- Кнопка "Отмена" ----------//
+//---------- РљРЅРѕРїРєР° "РћС‚РјРµРЅР°" ----------//
 
-//---------- Кнопка "Запустить игру" ----------//
+//---------- РљРЅРѕРїРєР° "Р—Р°РїСѓСЃС‚РёС‚СЊ РёРіСЂСѓ" ----------//
   bRun := BtnCreate(WizardForm.Handle,0,350,120,40,'button.png',18,false);
   BtnSetEvent(bRun,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bRun,Font.Handle);
   BtnSetFontColor(bRun,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
-//---------- Кнопка "Запустить игру" ----------//
+//---------- РљРЅРѕРїРєР° "Р—Р°РїСѓСЃС‚РёС‚СЊ РёРіСЂСѓ" ----------//
 
-//---------- Кнопка "Переустановить" ----------//
+//---------- РљРЅРѕРїРєР° "РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚СЊ" ----------//
   bReInstall := BtnCreate(WizardForm.Handle,380,350,120,40,'button.png',18,false);
   BtnSetEvent(bReInstall,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bReInstall,Font.Handle);
   BtnSetFontColor(bReInstall,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
-//---------- Кнопка "Переустановить" ----------//
+//---------- РљРЅРѕРїРєР° "РџРµСЂРµСѓСЃС‚Р°РЅРѕРІРёС‚СЊ" ----------//
 
-//---------- Кнопка "Удалить" ----------//
+//---------- РљРЅРѕРїРєР° "РЈРґР°Р»РёС‚СЊ" ----------//
   bDelete := BtnCreate(WizardForm.Handle,500,350,100,40,'button.png',18,false);
   BtnSetEvent(bDelete,BtnClickEventID,WrapBtnCallback(@ButtonsOnClick,1));
   BtnSetFont(bDelete,Font.Handle);
   BtnSetFontColor(bDelete,{#BtnFirstColor},{#BtnFirstColor},{#BtnSecondColor},{#BtnSecondColor});
-//---------- Кнопка "Удалить" ----------//
+//---------- РљРЅРѕРїРєР° "РЈРґР°Р»РёС‚СЊ" ----------//
 
   ImgApplyChanges(WizardForm.Handle);
 
@@ -1387,7 +1387,7 @@ procedure ShowComponents(CurPageID: integer);
 var i: integer;
 begin
   case CurPageID of
-  // страница показывается если игра уже установлена
+  // СЃС‚СЂР°РЅРёС†Р° РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ РµСЃР»Рё РёРіСЂР° СѓР¶Рµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР°
     wpWelcome:
     begin
       CurLangPageID := CurPageID;
@@ -1499,13 +1499,13 @@ var
   FindHandle1,ColFiles1,CurIndex1,tmp:integer;
   ExecError:boolean;
   InFilePath,OutFilePath,OutFileName:PAnsiChar;
-  GDFBinary: String;  // от GDF
+  GDFBinary: String;  // РѕС‚ GDF
 begin
   if CurStep = ssInstall then
   begin
     ISDoneCancel := 0;
 
-// Распаковка всех необходимых файлов в папку {tmp}.
+// Р Р°СЃРїР°РєРѕРІРєР° РІСЃРµС… РЅРµРѕР±С…РѕРґРёРјС‹С… С„Р°Р№Р»РѕРІ РІ РїР°РїРєСѓ {tmp}.
 
 ExtractTemporaryFile('unarc.dll');
 
@@ -1523,7 +1523,7 @@ ExtractTemporaryFile('CLS-srep.dll');
 ExtractTemporaryFile('CLS-MSC.dll');
 #endif
 #ifdef facompress
-    ExtractTemporaryFile('facompress.dll'); //ускоряет распаковку .arc архивов.
+    ExtractTemporaryFile('facompress.dll'); //СѓСЃРєРѕСЂСЏРµС‚ СЂР°СЃРїР°РєРѕРІРєСѓ .arc Р°СЂС…РёРІРѕРІ.
 #endif
 #ifdef records
     ExtractTemporaryFile('records.inf');
@@ -1564,40 +1564,40 @@ ExtractTemporaryFile('CLS-MSC.dll');
     ExtractTemporaryFile('English.ini');
     ExtractTemporaryFile('Russian.ini');
 
-// Подготавливаем переменную, содержащую всю информацию о выделенных компонентах для ISDone.dll
-// максимум 96 компонентов.
+// РџРѕРґРіРѕС‚Р°РІР»РёРІР°РµРј РїРµСЂРµРјРµРЅРЅСѓСЋ, СЃРѕРґРµСЂР¶Р°С‰СѓСЋ РІСЃСЋ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РІС‹РґРµР»РµРЅРЅС‹С… РєРѕРјРїРѕРЅРµРЅС‚Р°С… РґР»СЏ ISDone.dll
+// РјР°РєСЃРёРјСѓРј 96 РєРѕРјРїРѕРЅРµРЅС‚РѕРІ.
     Comps1 := 0; Comps2 := 0; Comps3 := 0;
 #ifdef Components
     TmpValue := 1;
-    if IsComponentSelected('language\ru') then Comps1 := Comps1+TmpValue;     //компонент 1
+    if IsComponentSelected('language\ru') then Comps1 := Comps1+TmpValue;     //РєРѕРјРїРѕРЅРµРЅС‚ 1
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\uk') then Comps1 := Comps1+TmpValue;     //компонент 2
+    if IsComponentSelected('language\uk') then Comps1 := Comps1+TmpValue;     //РєРѕРјРїРѕРЅРµРЅС‚ 2
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\br') then Comps1 := Comps1+TmpValue;    //компонент 3
+    if IsComponentSelected('language\br') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 3
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\de') then Comps1 := Comps1+TmpValue;    //компонент 4
+    if IsComponentSelected('language\de') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 4
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\es') then Comps1 := Comps1+TmpValue;    //компонент 5
+    if IsComponentSelected('language\es') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 5
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\fr') then Comps1 := Comps1+TmpValue;    //компонент 6
+    if IsComponentSelected('language\fr') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 6
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\it') then Comps1 := Comps1+TmpValue;    //компонент 7
+    if IsComponentSelected('language\it') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 7
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\ja') then Comps1 := Comps1+TmpValue;    //компонент 8
+    if IsComponentSelected('language\ja') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 8
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\ko') then Comps1 := Comps1+TmpValue;    //компонент 9
+    if IsComponentSelected('language\ko') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 9
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\pl') then Comps1 := Comps1+TmpValue;    //компонент 10
+    if IsComponentSelected('language\pl') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 10
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\pt') then Comps1 := Comps1+TmpValue;    //компонент 11
+    if IsComponentSelected('language\pt') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 11
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\sz') then Comps1 := Comps1+TmpValue;    //компонент 12
+    if IsComponentSelected('language\sz') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 12
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\tr') then Comps1 := Comps1+TmpValue;    //компонент 13
+    if IsComponentSelected('language\tr') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 13
     TmpValue := TmpValue*2;
-    if IsComponentSelected('language\zh') then Comps1 := Comps1+TmpValue;    //компонент 14
+    if IsComponentSelected('language\zh') then Comps1 := Comps1+TmpValue;    //РєРѕРјРїРѕРЅРµРЅС‚ 14
 //    .....
-// см. справку
+// СЃРј. СЃРїСЂР°РІРєСѓ
 #endif
 
     ImgPBDelete(ProgressBar);
@@ -1607,17 +1607,17 @@ ExtractTemporaryFile('CLS-MSC.dll');
     begin
       PostInstallStep := 'icons';
       PercentLbl.Caption := GetWord('CreatingIcons');
-      WizardForm.Caption := GetWord('Installing') + ' — ' + '{#AppName}' + ' — ' + GetWord('CreatingIcons');
+      WizardForm.Caption := GetWord('Installing') + ' вЂ” ' + '{#AppName}' + ' вЂ” ' + GetWord('CreatingIcons');
       if IsComponentSelected('icons\quicklaunchicon7') then PinToTaskbarWin7(ExpandConstant('{app}\{#AppExeName}'),true);   
 #ifdef GameExplorer
-      if IsComponentSelected('icons\gameux') then AddGame(CurStep); // Процесс добавления ярлыков в Game Explorer
+      if IsComponentSelected('icons\gameux') then AddGame(CurStep); // РџСЂРѕС†РµСЃСЃ РґРѕР±Р°РІР»РµРЅРёСЏ СЏСЂР»С‹РєРѕРІ РІ Game Explorer
 #endif
     end;
   end;
   if (CurStep=ssInstall) and ISDoneError then begin
     PostInstallStep := 'revert';
     PercentLbl.Caption := GetWord('Revert');
-    WizardForm.Caption := GetWord('Installing') + ' — ' + '{#AppName}' + ' — ' + GetWord('Revert');
+    WizardForm.Caption := GetWord('Installing') + ' вЂ” ' + '{#AppName}' + ' вЂ” ' + GetWord('Revert');
     Exec2(ExpandConstant('{uninstallexe}'), '/VERYSILENT', false);
     PinToTaskbarWin7(ExpandConstant('{app}\{#AppExeName}'),false);
     DelTree(ExpandConstant('{app}'), True, True, True);
