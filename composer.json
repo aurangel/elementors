@@ -5,5 +5,5 @@
     "type": "app",
     "keywords": ["logging", "cool", "awesome"],
     "time": "2014-03-05",
-    "license": "GPLv3",
+    "license": "MIT",
 }
