@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Elementors_arm.Base.SpllashScreen), true, true);
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Elementors_arm.Base.SpllashScreen), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HeaderForm));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.backstageView = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
@@ -50,7 +50,6 @@
             this.dxFullscreen = new DevExpress.XtraBars.BarCheckItem();
             this.dxReportDesigner = new DevExpress.XtraBars.BarButtonItem();
             this.dxKnowledgeBase = new DevExpress.XtraBars.BarButtonItem();
-            this.dxSource = new DevExpress.XtraBars.BarButtonItem();
             this.dxAbout = new DevExpress.XtraBars.BarButtonItem();
             this.dxFloat = new DevExpress.XtraBars.BarButtonItem();
             this.bbAbout = new DevExpress.XtraBars.BarButtonItem();
@@ -115,7 +114,6 @@
             this.dxFullscreen,
             this.dxReportDesigner,
             this.dxKnowledgeBase,
-            this.dxSource,
             this.dxAbout,
             this.dxFloat,
             this.bbAbout,
@@ -130,7 +128,7 @@
             this.repositoryItemFontEdit1,
             this.repositoryItemZoomTrackBar1});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbon.Size = new System.Drawing.Size(1178, 150);
+            this.ribbon.Size = new System.Drawing.Size(1058, 150);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             this.ribbon.Toolbar.ItemLinks.Add(this.bbKnowledgeBase);
             this.ribbon.Toolbar.ItemLinks.Add(this.bbAbout);
@@ -149,7 +147,7 @@
             this.backstageView.Ribbon = this.ribbon;
             this.backstageView.SelectedTab = this.tiAbout;
             this.backstageView.SelectedTabIndex = 0;
-            this.backstageView.Size = new System.Drawing.Size(852, 477);
+            this.backstageView.Size = new System.Drawing.Size(878, 477);
             this.backstageView.TabIndex = 6;
             // 
             // barAndDockingController
@@ -180,17 +178,20 @@
             this.backstageViewClientControl2.Controls.Add(this.pictureBox);
             this.backstageViewClientControl2.Location = new System.Drawing.Point(174, 63);
             this.backstageViewClientControl2.Name = "backstageViewClientControl2";
-            this.backstageViewClientControl2.Size = new System.Drawing.Size(677, 413);
+            this.backstageViewClientControl2.Size = new System.Drawing.Size(703, 413);
             this.backstageViewClientControl2.TabIndex = 1;
             // 
             // pictureBox
             // 
-            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(677, 414);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox.Size = new System.Drawing.Size(703, 413);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox.TabIndex = 1;
             this.pictureBox.TabStop = false;
             // 
@@ -267,7 +268,6 @@
             this.scgiLookAndFeel.Caption = "ribbonGalleryBarItem1";
             this.scgiLookAndFeel.Id = 17;
             this.scgiLookAndFeel.Name = "scgiLookAndFeel";
-            this.scgiLookAndFeel.GalleryItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.scgiLookAndFeel_GalleryItemClick_1);
             // 
             // dxColorMixer
             // 
@@ -304,15 +304,6 @@
             this.dxKnowledgeBase.Name = "dxKnowledgeBase";
             this.dxKnowledgeBase.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.dxKnowledgeBase.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.dxKnowledgeBase_ItemClick);
-            // 
-            // dxSource
-            // 
-            this.dxSource.Caption = "Репозиторий исходного кода";
-            this.dxSource.Glyph = ((System.Drawing.Image)(resources.GetObject("dxSource.Glyph")));
-            this.dxSource.Id = 23;
-            this.dxSource.Name = "dxSource";
-            this.dxSource.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.dxSource.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.dxSource_ItemClick);
             // 
             // dxAbout
             // 
@@ -409,7 +400,6 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.dxKnowledgeBase);
-            this.ribbonPageGroup1.ItemLinks.Add(this.dxSource, true);
             this.ribbonPageGroup1.ItemLinks.Add(this.dxAbout, true);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
@@ -431,15 +421,15 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 634);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 628);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1178, 23);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1058, 23);
             // 
             // cxLookAndFeelController
             // 
             this.cxLookAndFeelController.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.Transparent;
-            this.cxLookAndFeelController.LookAndFeel.SkinName = "Office 2013";
+            this.cxLookAndFeelController.LookAndFeel.SkinName = "Visual Studio 2013 Dark";
             this.cxLookAndFeelController.LookAndFeel.TouchUIMode = DevExpress.LookAndFeel.TouchUIMode.False;
             // 
             // nbMain
@@ -469,7 +459,7 @@
             this.nbMain.Name = "nbMain";
             this.nbMain.OptionsNavPane.ExpandedWidth = 235;
             this.nbMain.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.nbMain.Size = new System.Drawing.Size(235, 484);
+            this.nbMain.Size = new System.Drawing.Size(235, 478);
             this.nbMain.TabIndex = 2;
             this.nbMain.Text = "Таблицы";
             this.nbMain.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbMain_LinkPressed);
@@ -595,7 +585,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 657);
+            this.ClientSize = new System.Drawing.Size(1058, 651);
             this.Controls.Add(this.backstageView);
             this.Controls.Add(this.nbMain);
             this.Controls.Add(this.ribbonStatusBar1);
@@ -606,17 +596,19 @@
             this.InactiveGlowColor = System.Drawing.Color.Blue;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(840, 530);
+            this.MinimumSize = new System.Drawing.Size(852, 530);
             this.Name = "HeaderForm";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Elementors arm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HeaderForm_FormClosed);
             this.Load += new System.EventHandler(this.HeaderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.backstageView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController)).EndInit();
             this.backstageViewClientControl2.ResumeLayout(false);
+            this.backstageViewClientControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemZoomTrackBar1)).EndInit();
@@ -665,7 +657,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup dxbReportDesigner;
         private DevExpress.XtraBars.Ribbon.RibbonPage tabHelp;
         private DevExpress.XtraBars.BarButtonItem dxKnowledgeBase;
-        private DevExpress.XtraBars.BarButtonItem dxSource;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem dxAbout;
         private DevExpress.XtraBars.BarAndDockingController barAndDockingController;

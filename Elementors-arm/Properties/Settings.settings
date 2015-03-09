@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Elementors_arm.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Skin" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Office 2013</Value>
-    </Setting>
     <Setting Name="cbCollection" Type="System.Collections.ArrayList" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

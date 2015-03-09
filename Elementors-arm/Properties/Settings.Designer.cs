@@ -25,18 +25,6 @@ namespace Elementors_arm.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Office 2013")]
-        public string Skin {
-            get {
-                return ((string)(this["Skin"]));
-            }
-            set {
-                this["Skin"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Collections.ArrayList cbCollection {
             get {
                 return ((global::System.Collections.ArrayList)(this["cbCollection"]));

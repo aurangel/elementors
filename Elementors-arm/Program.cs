@@ -31,9 +31,9 @@ namespace Elementors_arm
             DevExpress.UserSkins.BonusSkins.Register();
             DevExpress.Skins.SkinManager.EnableFormSkins();
             DevExpress.Skins.SkinManager.EnableMdiFormSkins();
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2013");
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Visual Studio 2013 Dark");
 
-            Application.Run(new HeaderForm());
+            Application.Run(new Base.Login());
         }
 
     }

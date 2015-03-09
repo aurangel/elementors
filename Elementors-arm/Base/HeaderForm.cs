@@ -61,8 +61,6 @@ namespace Elementors_arm
 
             SkinHelper.InitSkinGallery(scgiLookAndFeel, true);
             //Заполнение контейнера галереи скинов
-            cxLookAndFeelController.LookAndFeel.SkinName = Properties.Settings.Default.Skin;
-            //Установка активного скина исходя из значения строковой переменной
         }
 
         public class MyBarLocalizer : BarLocalizer
@@ -159,14 +157,6 @@ namespace Elementors_arm
             }
         }
 
-        private void scgiLookAndFeel_GalleryItemClick_1(object sender, DevExpress.XtraBars.Ribbon.GalleryItemClickEventArgs e)
-        {
-            Properties.Settings.Default.Skin = e.Item.Caption;
-            //Программное свойство Skin заполняется именем последнего выбранного скина
-            Properties.Settings.Default.Save();
-            //Сохранение текущего значения свойства 
-        }
-
         private void dxReportDesigner_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             SplashScreenManager.ShowForm(this, typeof(Base.Waiting), true, true, false);
@@ -205,16 +195,19 @@ namespace Elementors_arm
             //Каждая смена имени активной таблицы вносится в переменную
         }
 
-        private static void DocumentLoading(string name) {
+        private static void DocumentLoading(string name)
+        {
             Data.ValueOfReport = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, name);
             //Объединение пути к отчету и базового каталога в одну строку
             XtraReport report = new XtraReport();
             //Инициализирует новый экземпляр класса XtraReport с настройками по умолчанию
+            report.LoadLayout(Data.ValueOfReport);
+            //Загрузка макета отчета из файла в формате REPX
             ReportPrintTool printTool = new ReportPrintTool(report);
             //Инициализирует новый экземпляр класса ReportPrintTool с указанным отчетом
 
-            ((XtraReport)printTool.Report).LoadLayout(Data.ValueOfReport);
-            //Загрузка макета отчета из файла в формате REPX
+            printTool.ShowPreview();
+            //Отображает окно отчета
         }
 
         private void docTitulList_LinkPressed(object sender, NavBarLinkEventArgs e)
@@ -300,6 +293,11 @@ namespace Elementors_arm
             //Комбинирование строки до автономной справки
             Help.ShowHelp(this, PathToHelp);
             //Отображение содержимого справки
+        }
+
+        private void HeaderForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
     }
